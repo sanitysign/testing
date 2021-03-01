@@ -1,0 +1,235 @@
+@import 'normalize';
+@import 'visuallyhidden';
+@import 'variables';
+@import 'loader';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background: $bg-main;
+  color: $text-main;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  transition: 
+    opacity .3s ease-in-out,
+    color .3s ease-in-out,
+    border-color .3s ease-in-out,
+    background-color .3s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+  }
+  
+  &:active {
+    outline: none;
+    opacity: .5;
+  }
+}
+
+.link {
+  // display: inline-block;
+  transition: 
+    opacity .3s ease-in-out,
+    color .3s ease-in-out,
+    border-color .3s ease-in-out,
+    background-color .3s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:focus {
+    outline: 2px solid;
+  }
+
+  &:active,
+  &:visited {
+    outline: none;
+    opacity: .5;
+  }
+}
+
+.posts {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba($text-main, .5);
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: $text-main;
+
+  &__link-back {
+    margin-bottom: 10px;
+    display: inline-block;
+    color: $accent;
+    font-size: 16px;
+  }
+
+  &__arrow_left {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  &__heading {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: $text-main;
+  }
+
+  &__loader {
+    text-align: center;
+  }
+
+  &__body.hidden {
+    display: none;
+  }
+
+  &__list {
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
+
+
+  &__item {
+    padding: 0 10px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgba($btn-main, .2);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  } 
+
+  &__link {
+    color: $link-main;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  &__pagination {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pagination-link {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    background-color: $link-main;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: $link-main;
+
+    &_prev {
+      background-image: url(../img/angle-left-solid.svg);
+      background-position-x: 40%;
+    }
+
+    &_next {
+      background-image: url(../img/angle-right-solid.svg);
+      background-position-x: 60%;
+    }
+  }
+
+  &__numbers {
+    padding: 0 10px;
+  }
+}
+
+.posts-post {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 800px;
+
+  &__heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $accent;
+  }
+
+  &__date {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: rgba($text-main, .5);
+  }
+
+  &__text {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    line-height: 2;
+    font-weight: 400;
+    border-bottom: 1px solid rgba($text-main, .2);
+  }
+
+  &__comments {
+    text-align: center;
+  }
+
+  &__comments-list {
+    padding: 0 20px;
+  }
+
+  &__comments-heading {
+    color: $accent;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__comment {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba($accent, .2);
+    // text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__comment-author {
+    color: $accent;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+
+}
